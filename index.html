@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Macbook</title>
-
+    <title>Apple Store</title>
     <!-- Tailwind CSS -->
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
@@ -13,12 +12,9 @@
     />
   </head>
   <body>
-    <!-- Header Section -->
     <header></header>
-    <!-- Main Section -->
     <main>
       <section class="mt-5 grid grid-cols-2 gap-x-10">
-        <!-- image -->
         <div class="flex items-start justify-end">
           <img class="w-1/2" src="/images/mac.png" alt="Mac" />
         </div>
@@ -37,6 +33,7 @@
           <div class="mt-5">
             <h3 class="text-sm font-bold mb-1">Memory</h3>
             <button
+              id="memorybtn-1"
               class="
                 p-1
                 rounded
@@ -48,6 +45,7 @@
               8GB unified memory
             </button>
             <button
+              id="memorybtn-2"
               class="
                 p-1
                 rounded
@@ -62,6 +60,7 @@
           <div class="mt-5">
             <h3 class="text-sm font-bold mb-1">Storage</h3>
             <button
+              id="storagebtn-1"
               class="
                 p-1
                 rounded
@@ -73,6 +72,7 @@
               256GB SSD storage
             </button>
             <button
+              id="storagebtn-2"
               class="
                 p-1
                 rounded
@@ -84,6 +84,7 @@
               512GB SSD storage
             </button>
             <button
+              id="storagebtn-3"
               class="
                 p-1
                 rounded
@@ -98,6 +99,7 @@
           <div class="mt-5">
             <h3 class="text-sm font-bold mb-1">Choose your delivery option</h3>
             <button
+              id="deliverybtn-1"
               class="
                 p-1
                 rounded
@@ -109,6 +111,7 @@
               Friday, Aug 25 FREE Prime Delivery
             </button>
             <button
+              id="deliverybtn-2"
               class="
                 p-1
                 rounded
@@ -133,37 +136,39 @@
                 <h3 class="font-bold">Extra Memory Cost</h3>
               </div>
               <div>
-                <h3 class="font-bold">$0</h3>
+                <h3 class="font-bold">$<span id="memory-cost">0</span></h3>
               </div>
               <hr class="col-span-3 my-2" />
               <div class="col-span-2">
                 <h3 class="font-bold">Extra Storage Cost</h3>
               </div>
               <div>
-                <h3 class="font-bold">$0</h3>
+                <h3 class="font-bold">$<span id="storage-cost">0</span></h3>
               </div>
               <hr class="col-span-3 my-2" />
               <div class="col-span-2">
                 <h3 class="font-bold">Delivery charge</h3>
               </div>
               <div>
-                <h3 class="font-bold">$0</h3>
+                <h3 class="font-bold">$<span id="delivery-cost">0</span></h3>
               </div>
               <hr class="col-span-3 my-2 border-black" />
               <div class="col-span-2">
                 <h3 class="font-bold">Total Price</h3>
               </div>
               <div>
-                <h3 class="font-bold">$1299</h3>
+                <h3 class="font-bold">$<span id="total-price">1299</span></h3>
               </div>
               <hr class="col-span-3 my-2" />
               <div class="col-span-3 mt-1">
                 <h3 class="font-semibold">Add Promo Code</h3>
                 <input
                   type="text"
-                  class="border p-2 rounded font-bold uppercase"
+                  id="promo-field"
+                  class="border p-2 rounded font-bold"
                 />
                 <button
+                  id="promo-btn"
                   class="
                     p-2
                     rounded
@@ -185,12 +190,12 @@
       </section>
       <section class="mb-5">
         <h1 class="text-center text-3xl font-semibold">
-          Total: $<span>1299</span>
+          Total: $<span id="grand-total-price">1299</span>
         </h1>
       </section>
     </main>
     <footer></footer>
-    <!-- js Script -->
+    <!-- JS -->
     <script src="/js/total.js"></script>
   </body>
 </html>
